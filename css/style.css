@@ -314,19 +314,16 @@ text-decoration: none;
   max-width: 100%;
   margin: 18px auto 0;
 }
-
 .product-hero-content {
   display: flex;
   gap: 20px;
 }
-
 .product-hero-left {
   width: 50%;
   display: flex;
   flex-direction: column;
   font-weight: bold;
 }
-
 .product-hero-back {
   display: flex;
   align-items: stretch;
@@ -336,7 +333,6 @@ text-decoration: none;
   font-weight: normal;
   line-height: 1.5;
 }
-
 .back-arrow {
   aspect-ratio: 3;
   object-fit: contain;
@@ -345,12 +341,10 @@ text-decoration: none;
   flex-shrink: 0;
   margin: auto 0;
 }
-
 .back-text {
   flex-basis: auto;
   text-decoration: none !important;
 }
-
 .product-title {
   color: #324950;
   font-size: 54px;
@@ -358,7 +352,6 @@ text-decoration: none;
   align-self: stretch;
   margin-top: 19px;
 }
-
 .divider {
   aspect-ratio: 7.81;
   object-fit: contain;
@@ -366,20 +359,17 @@ text-decoration: none;
   fill: #57984C;
   margin-top: 40px;
 }
-
 .product-highlight h2{
   color: #bd1919;
     font-size: 1.4rem;
     margin: 20px 0 40px;
 }
-
 .section-title {
   color: #57984C;
   font-size: 20px;
   line-height: 1;
   margin-top: 40px;
 }
-
 .section-divider {
   border: 1px solid rgba(87, 152, 76, 1);
   background-color: #57984C;
@@ -388,11 +378,9 @@ text-decoration: none;
   height: 0px;
   margin-top: 11px;
 }
-
 .full-width {
   width: 100%;
 }
-
 .product-resistance {
   color: #324950;
   font-size: 17px;
@@ -401,11 +389,6 @@ text-decoration: none;
   width: 495px;
   margin-top: 24px;
 }
-
-.bold {
-  font-weight: bold;
-}
-
 .product-hero-right {
   width: 50%;
   margin-left: 20px;
@@ -418,18 +401,15 @@ text-decoration: none;
   line-height: 34px;
   margin-top: 42px;
 }
-
 .product-image {
   aspect-ratio: 1.08;
   object-fit: contain;
   width: 100%;
 }
-
 .download-button-container {
   display: flex;
   justify-content: right;
 }
-
 .download-button {
   border: 2px solid #57984C;
   background-color: white;
@@ -440,7 +420,6 @@ text-decoration: none;
   border-radius: 60px;
   cursor: pointer;
 }
-
 .download-icon {
   aspect-ratio: 0.87;
   object-fit: contain;
@@ -448,25 +427,20 @@ text-decoration: none;
   flex-shrink: 0;
   width: 20%;
 }
-
 .download-text {
   font-weight: bold;
   color: #57984C;
 }
-
-/* Product Details Section */
 .product-details {
   align-self: left;
   width: 753px;
   max-width: 100%;
   margin-left: 324px;
 }
-
 .product-details-content {
   display: flex;
   gap: 160px;
 }
-
 .product-details-left {
   width: 69%;
   display: flex;
@@ -476,11 +450,9 @@ text-decoration: none;
   font-weight: bold;
   line-height: 1;
 }
-
 .product-details-section {
   margin-bottom: 30px;
 }
-
 .section-text {
   color: #324950;
   font-size: 17px;
@@ -488,7 +460,6 @@ text-decoration: none;
   line-height: 34px;
   margin-top: 24px;
 }
-
 .product-details-right {
   width: 31%;
   margin-left: 20px;
