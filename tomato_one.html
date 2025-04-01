@@ -9,6 +9,8 @@
     <title>Tomato one</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js" defer></script>
+    <script src="js/main.js" defer></script>
 </head>
 <body>
 <div class="header">
@@ -40,15 +42,11 @@
         </div>
     </div>
 </div>
-<section class="product-hero">
+<div id="bananas">
+<div class="product-hero">
     <div class="product-hero-content">
         <div class="product-hero-left">
-            <div class="product-hero-back">
-                <img src="images/Arrow.png" alt="Back Arrow" class="back-arrow"/>
-                <a href="tomato_all.html" class="back-text" style="color: #57984C;">Return to all tomatoes</a>
-            </div>
-            <h1 class="product-title">
-                TAG 1002 (TAG 809)
+            <h1>{{product.title}}
                 <br/>
                 <span style="color: #57984C;">Tomato Determinate</span>
                 <br/>
@@ -71,41 +69,35 @@
             </div>
         </div>
         <div class="product-hero-right">
-            <img src="images/1002.png" alt="Tomato Product" class="product-image"/>
-            <div class="download-button-container">
-                <button class="download-button">
-                    <img src="images/Ico_pdf.png" alt="Download Icon" class="download-icon"/>
-                    <div class="download-text">
-                        Download PDF
-                    </div>
-                </button>
+            <img :src="product.image" class="product-image"/>
+            <div class="btn-pdf-tomato">
+                <a class="pdf-download-button" href="#" @click.prevent="addToCart(product.id)" v-if="!btnVisible">
+                    <span class="pdf-icon"></span>
+                    Add to basket
+                </a>
+                <a class="pdf-download-button" href="contact_us.html" v-if="btnVisible">
+                    <span class="pdf-icon"></span>
+                    Go to basket
+                </a>
             </div>
         </div>
     </div>
-</section>
-<section class="product-details">
+</div>
+<div class="product-details">
     <div class="product-details-content">
         <div class="product-details-left">
             <div class="product-details-section">
                 <h2 class="section-title">Plant</h2>
                 <div class="section-divider"></div>
-                <div class="section-text">
-                    Strong vigor that provides good leaf coverage.
-                    <br/>
-                    Very high productivity with good fruit setting.
-                    <br/>
-                    Early matured variety.
+                <div class="section-text" v-for="value in product.desc.plant">
+                    <span>{{value}}</span>
                 </div>
             </div>
             <div class="product-details-section">
                 <h2 class="section-title">Fruit</h2>
                 <div class="section-divider"></div>
-                <div class="section-text">
-                    Long shelf life on plant and post harvest.
-                    <br/>
-                    Nice shiny attractive deep red color.
-                    <br/>
-                    Average fruit size: 140 – 160 grams.
+                <div class="section-text" v-for="value in product.desc.fruit">
+                    <span>{{value}}</span>
                 </div>
             </div>
         </div>
@@ -113,23 +105,21 @@
             <div class="product-details-section">
                 <h2 class="section-title">Cycle</h2>
                 <div class="section-divider full-width"></div>
-                <div class="section-text">
-                    Spring
-                    <br/>
-                    Fall <br/>
-                    Winter
+                <div class="section-text" v-for="value in product.desc.cycle">
+                    <span>{{value}}</span>
                 </div>
             </div>
             <div class="product-details-section">
                 <h2 class="section-title">Color</h2>
                 <div class="section-divider full-width"></div>
                 <div class="section-text">
-                    Red
+                <span>{{product.desc.color}}</span>
                 </div>
             </div>
         </div>
     </div>
-</section>
+</div>
+</div>
 <div class="footer">
     <div class="footer_content">
         <div id="links">

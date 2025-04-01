@@ -35,6 +35,11 @@ body {
     float: left;
 }
 
+.w-4 {
+    width: 25%;
+    float: left;
+}
+
 .align-right {
     text-align: right;
 }
@@ -626,7 +631,7 @@ body {
     display: block;
 }
 
-.product-card a{
+.product-card a {
     text-decoration: none;
 }
 
@@ -634,9 +639,11 @@ body {
     padding: 10px;
     background-color: #f4f4f4;
 }
+
 .product-info {
     text-decoration: none;
 }
+
 .tomato-title {
     font-size: 16px;
     color: #4b7945;
@@ -646,6 +653,121 @@ body {
 .product-description {
     font-size: 14px;
     color: #777;
+}
+
+.btn-pdf-tomato {
+    text-align: end;
+}
+
+.pdf-download-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 32px;
+    margin-top: 30px;
+    border-radius: 25px;
+    border: 3px solid #57984C;
+    color: #57984C;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.pdf-icon::before {
+    content: url('../images/basket.png');
+    margin-right: 20px;
+}
+
+.basket-wrapper{
+    display: flex;
+    flex-direction:column;
+    max-width: 1127px;
+    width:100%;
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+.basket-item{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 2px solid #324950;
+    width: 50%;
+    text-align: center
+}
+
+.basket-item img {
+    max-width: 92%;
+    height: auto;
+}
+
+.basket-item button {
+    text-align: center;
+    font-size: 40px;
+    color: #EB5757;
+    cursor: pointer;
+}
+
+.remove {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+}
+
+.img-tomato {
+    width: 100%;
+}
+
+.tomato-one h1{
+    font-size: 54px;
+    color: #324950;
+    margin: 0;
+    line-height: 148%;
+}
+.tomato-one h2{
+    font-size: 54px;
+    color: #57984C;
+    margin: 0;
+    line-height: 148%;
+    margin-bottom: 45px;
+}
+.right-text{
+    display: flex;
+    align-items: center;
+    margin-top: 44px;
+}
+.right-text span{
+    font-size: 30px;
+    font-weight: bold;
+    color: #CF2333;
+    margin-left: 35px;
+}
+.green-titles{
+    color: #57984C;
+    width: 26%;
+    margin-top: 44px;
+}
+.green-titles hr{
+    border-top: 1px solid #57984C;
+    width: 100%;
+}
+.character{
+    font-size: 17px;
+    color: #324950;
+    line-height: 162,7%;
+}
+.ul-tomatoone{
+    color: #324950;
+    padding: 0;
+    margin: 0;
+    padding-left: 20px;
+}
+.ul-tomatoone li{
+    margin-bottom: 15px;
+    color: #57984C
+}
+.ul-tomatoone li span{
+    color: #324950
 }
 
 .contact {
