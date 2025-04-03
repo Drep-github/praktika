@@ -677,16 +677,16 @@ body {
     margin-right: 20px;
 }
 
-.basket-wrapper{
+.basket-wrapper {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     max-width: 1127px;
-    width:100%;
+    width: 100%;
     font-size: 17px;
     margin-bottom: 15px;
 }
 
-.basket-item{
+.basket-item {
     display: flex;
     align-items: center;
     padding: 10px;
@@ -707,6 +707,17 @@ body {
     cursor: pointer;
 }
 
+.form-info p {
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 20px;
+    color: #324950;
+    padding: 10px;
+    background-color: #f0f8ff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 .remove {
     border: none;
     background: none;
@@ -718,55 +729,64 @@ body {
     width: 100%;
 }
 
-.tomato-one h1{
+.tomato-one h1 {
     font-size: 54px;
     color: #324950;
     margin: 0;
     line-height: 148%;
 }
-.tomato-one h2{
+
+.tomato-one h2 {
     font-size: 54px;
     color: #57984C;
     margin: 0;
     line-height: 148%;
     margin-bottom: 45px;
 }
-.right-text{
+
+.right-text {
     display: flex;
     align-items: center;
     margin-top: 44px;
 }
-.right-text span{
+
+.right-text span {
     font-size: 30px;
     font-weight: bold;
     color: #CF2333;
     margin-left: 35px;
 }
-.green-titles{
+
+.green-titles {
     color: #57984C;
     width: 26%;
     margin-top: 44px;
 }
-.green-titles hr{
+
+.green-titles hr {
     border-top: 1px solid #57984C;
     width: 100%;
 }
-.character{
+
+.character {
     font-size: 17px;
     color: #324950;
-    line-height: 162,7%;
+    line-height: 162, 7%;
 }
-.ul-tomatoone{
+
+.ul-tomatoone {
     color: #324950;
     padding: 0;
     margin: 0;
     padding-left: 20px;
 }
-.ul-tomatoone li{
+
+.ul-tomatoone li {
     margin-bottom: 15px;
     color: #57984C
 }
-.ul-tomatoone li span{
+
+.ul-tomatoone li span {
     color: #324950
 }
 

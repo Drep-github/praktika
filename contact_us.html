@@ -47,116 +47,131 @@
 <div class="wrapper">
     <h1 class="text-content1">Contact us</h1>
     <p class="text-content2">×××××</p>
-<div id="bananas">
-    <div class="basket-wrapper" v-if="cartVisible">
-        <div class="basket-item" v-for="p in product">
-            <div class="w-4"><img v-bind:src="p.image" alt="p.title"></div>
-            <div class="w-4">{{ p.title }}</div>
-            <div class="w-4">{{ p.short_text }}</div>
-            <div class="w-4" @click.prevent="removeFromCart(p.id)">
-                <button class="remove">×</button>
+    <div id="bananas">
+        <div class="basket-wrapper" v-if="cartVisible">
+            <div class="basket-item" v-for="p in product">
+                <div class="w-4"><img v-bind:src="p.image" alt="p.title"></div>
+                <div class="w-4">{{ p.title }}</div>
+                <div class="w-4">{{ p.short_text }}</div>
+                <div class="w-4" @click.prevent="removeFromCart(p.id)">
+                    <button class="remove">×</button>
+                </div>
             </div>
         </div>
-    </div>
-    <div id="contact">
-        <form @submit.prevent="makeOrder" class="contact">
-            <div class="form-layout">
-                <div class="form-column">
-                    <div class="field">
-                        <label for="Name">Name *</label>
-                        <input type="text" name="Name" v-model="contactFields.name" required>
+        <div id="contact">
+            <form @submit.prevent="makeOrder" class="contact">
+                <div class="form-layout">
+                    <div class="form-column">
+                        <div class="field">
+                            <label for="Name">Name *</label>
+                            <input type="text" name="Name" v-model="contactFields.name" required>
+                        </div>
+                        <div class="field">
+                            <label for="Company_Name">Company Name *</label>
+                            <input type="text" name="Company_Name" v-model="contactFields.companyName" required>
+                        </div>
+                        <div class="field">
+                            <label for="Position">Position *</label>
+                            <input type="text" name="Position" v-model="contactFields.position" required>
+                        </div>
+                        <div class="field">
+                            <label for="City">City *</label>
+                            <input type="text" name="City" v-model="contactFields.city" required>
+                        </div>
+                        <div class="field">
+                            <label for="Country">Country *</label>
+                            <input type="text" name="Country" v-model="contactFields.country" required>
+                        </div>
+                        <div class="field">
+                            <label for="Telephone">Telephone *</label>
+                            <input type="text" name="Telephone" v-model="contactFields.telephone" required>
+                        </div>
+                        <div class="field">
+                            <label for="Email">Email *</label>
+                            <input type="email" name="Email" v-model="contactFields.email" required>
+                        </div>
                     </div>
-                    <div class="field">
-                        <label for="Company_Name">Company Name *</label>
-                        <input type="text" name="Company_Name" v-model="contactFields.companyName" required>
-                    </div>
-                    <div class="field">
-                        <label for="Position">Position *</label>
-                        <input type="text" name="Position" v-model="contactFields.position" required>
-                    </div>
-                    <div class="field">
-                        <label for="City">City *</label>
-                        <input type="text" name="City" v-model="contactFields.city" required>
-                    </div>
-                    <div class="field">
-                        <label for="Country">Country *</label>
-                        <input type="text" name="Country" v-model="contactFields.country" required>
-                    </div>
-                    <div class="field">
-                        <label for="Telephone">Telephone *</label>
-                        <input type="text" name="Telephone" v-model="contactFields.telephone" required>
-                    </div>
-                    <div class="field">
-                        <label for="Email">Email *</label>
-                        <input type="email" name="Email" v-model="contactFields.email" required>
-                    </div>
-                </div>
 
-                <div class="form-column">
-                    <div class="field">
-                        <label for="sel">You are a *</label>
-                        <select name="You_are_a" v-model="contactFields.youAre" required>
-                            <option value="">Select...</option>
-                            <option value="gardener">Gardener</option>
-                            <option value="farmer">Farmer</option>
-                            <option value="landscape designer">Landscape Designer</option>
-                            <option value="retail buyer">Retail Buyer</option>
-                        </select>
-                    </div>
-                    <div class="field">
-                        <label for="Other_specify">If other, please specify *</label>
-                        <input type="text" name="Other_specify" v-model="contactFields.otherSpecify" required>
-                    </div>
-                    <div class="field">
-                        <label for="Interested">You are interested in *</label>
-                        <textarea name="Interested" cols="30" rows="16" v-model="contactFields.interested" required></textarea>
-                    </div>
-                    <div class="captcha-group">
-                        <label>Please type this code</label>
-                        <div class="captcha-container">
-                            <img src="images/captcha.png" alt="captcha">
-                            <input type="text" name="captcha" required placeholder="Enter code"
-                                   style="border-radius: 7px" v-model="contactFields.capcha">
-                            <input type="submit" value="Send Message" class="captcha-submit" :disabled="formSubmitted">
+                    <div class="form-column">
+                        <div class="field">
+                            <label for="sel">You are a *</label>
+                            <select name="You_are_a" v-model="contactFields.youAre" required>
+                                <option value="">Select...</option>
+                                <option value="gardener">Gardener</option>
+                                <option value="farmer">Farmer</option>
+                                <option value="landscape designer">Landscape Designer</option>
+                                <option value="retail buyer">Retail Buyer</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label for="Other_specify">If other, please specify *</label>
+                            <input type="text" name="Other_specify" v-model="contactFields.otherSpecify" required>
+                        </div>
+                        <div class="field">
+                            <label for="Interested">You are interested in *</label>
+                            <textarea name="Interested" cols="30" rows="16" v-model="contactFields.interested"
+                                      required></textarea>
+                        </div>
+                        <div class="captcha-group">
+                            <label>Please type this code</label>
+                            <div class="captcha-container">
+                                <img src="images/captcha.png" alt="captcha">
+                                <input type="text" name="captcha" required placeholder="Enter code"
+                                       style="border-radius: 7px" v-model="contactFields.capcha">
+                                <input type="submit" value="Send Message" class="captcha-submit"
+                                       :disabled="formSubmitted">
+                            </div>
                         </div>
                     </div>
                 </div>
+            </form>
+            <div v-if="!formVisible" class="form-info">
+                <p>Name: {{ contactFields.name }}</p>
+                <p>companyName: {{ contactFields.companyName }}</p>
+                <p>Position: {{ contactFields.position }}</p>
+                <p>City: {{ contactFields.city }}</p>
+                <p>Country: {{ contactFields.country }}</p>
+                <p>Telephone: {{ contactFields.telephone }}</p>
+                <p>Email: {{ contactFields.email }}</p>
+                <p>You are a: {{ contactFields.youAre }}</p>
+                <p>Other specify: {{ contactFields.otherSpecify }}</p>
+                <p>Interested in: {{ contactFields.interested }}</p>
             </div>
-        </form>
+        </div>
     </div>
 </div>
-    <div class="contacts">
-        <div class="text-content6">
-            <span><b>Our Address</b></span>
-            <hr class="under_adresses">
-            <p class="text-content5">AGRIDERA Seeds & Agriculture Ltd.</p>
-            <p class="text-content5">P.O Box 103,</p>
-            <p class="text-content5">Gedera 70750, Israel</p>
-            <p class="text-content5">Telephone: <a href="tel:+97289449222">+972 8 944 9222</a></p>
+<div class="contacts">
+    <div class="text-content6">
+        <span><b>Our Address</b></span>
+        <hr class="under_adresses">
+        <p class="text-content5">AGRIDERA Seeds & Agriculture Ltd.</p>
+        <p class="text-content5">P.O Box 103,</p>
+        <p class="text-content5">Gedera 70750, Israel</p>
+        <p class="text-content5">Telephone: <a href="tel:+97289449222">+972 8 944 9222</a></p>
+    </div>
+</div>
+<div class="footer">
+    <div class="footer_content">
+        <div id="links">
+            <ul>
+                <li><a href="">PROFILE</a></li>
+                <li><a href="">MANAGEMENT</a></li>
+                <li><a href="tomato_all.html">PRODUCTS</a></li>
+                <li><a href="">R&D</a></li>
+                <li><a href="">LINKS</a></li>
+                <li><a href="">SITEMAP</a></li>
+                <li><a href="contact_us.html">CONTACT</a></li>
+            </ul>
+        </div>
+        <div class="social">
+            <a href="https://linkedin.com"><img src="images/Ico_in.png" alt="in"></a>
+            <a href="https://www.instagram.com"><img src="images/Ico_inst.png" alt="inst"></a>
+            <a href="https://www.youtube.com"><img src="images/Ico_tube.png" alt="youtube"></a>
+            <a href="https://twitter.com"><img src="images/Ico_tw.png" alt="twitter"></a>
+            <a href="https://facebook.com"><img src="images/Ico_fb.png" alt="facebook"></a>
         </div>
     </div>
-    <div class="footer">
-        <div class="footer_content">
-            <div id="links">
-                <ul>
-                    <li><a href="">PROFILE</a></li>
-                    <li><a href="">MANAGEMENT</a></li>
-                    <li><a href="tomato_all.html">PRODUCTS</a></li>
-                    <li><a href="">R&D</a></li>
-                    <li><a href="">LINKS</a></li>
-                    <li><a href="">SITEMAP</a></li>
-                    <li><a href="contact_us.html">CONTACT</a></li>
-                </ul>
-            </div>
-            <div class="social">
-                <a href="https://linkedin.com"><img src="images/Ico_in.png" alt="in"></a>
-                <a href="https://www.instagram.com"><img src="images/Ico_inst.png" alt="inst"></a>
-                <a href="https://www.youtube.com"><img src="images/Ico_tube.png" alt="youtube"></a>
-                <a href="https://twitter.com"><img src="images/Ico_tw.png" alt="twitter"></a>
-                <a href="https://facebook.com"><img src="images/Ico_fb.png" alt="facebook"></a>
-            </div>
-        </div>
-        <p>AGRIDERA SEEDS & AGRICULTURE LTD. © 2020</p>
-    </div>
+    <p>AGRIDERA SEEDS & AGRICULTURE LTD. © 2020</p>
+</div>
 </body>
 </html>

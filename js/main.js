@@ -184,7 +184,6 @@ var app = new Vue({
 
             this.cart = [];
             window.localStorage.removeItem('cart');
-            alert("Ваш запит надіслано.");
         }
     },
 });
