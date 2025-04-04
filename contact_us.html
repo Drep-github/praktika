@@ -59,7 +59,7 @@
             </div>
         </div>
         <div id="contact">
-            <form @submit.prevent="makeOrder" class="contact">
+            <form @submit.prevent="makeOrder" v-if="formVisible" class="contact">
                 <div class="form-layout">
                     <div class="form-column">
                         <div class="field">
